@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+    background-color: #0a0a0a;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: black;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Hero Section */
+#beranda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #aaa;
+}
+
+/* SVG Wrapper */
+[data-svg-wrapper] {
+    width: 100%;
+    max-width: 800px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-text-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+}
+
+.circular-text-svg {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    fill: white;
+    animation: rotateText 6s linear infinite;
+}
+
+.arrow-down {
+    position: absolute;
+    font-size: 24px;
+    color: white;
+    animation: bounce 1.5s infinite;
+}
+
+/* Bounce Animation for Arrow */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Rotating Circular Text */
+@keyframes rotateText {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#tentang {
+    background: #121212;
+    color: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.tentang-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.tentang-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.tentang-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+.tentang-content {
+    text-align: left;
+    max-width: 500px;
+}
+
+.hello-world h3,
+.informasi-kontak h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hello-world p,
+.informasi-kontak p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #bbbbbb;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6600;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.buttons button {
+    background: #ff6600;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    background: #e65c00;
+}
+
+@media (max-width: 768px) {
+    .tentang-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tentang-content {
+        max-width: 100%;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+}
+
+
