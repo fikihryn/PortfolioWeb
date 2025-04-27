@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NothingCreated - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -22,38 +23,37 @@
     </header>
     
     <section id="beranda">
-        <div class="hero">
-            <h1>FIKI HARYONO</h1>
-            <p>UI UX DESIGNER & FRONTEND DEVELOPER</p>
+        <!-- Adding floating shapes for visual interest -->
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>FIKI HARYONO</h1>
+                <p>UI UX DESIGNER & FRONTEND DEVELOPER</p>
+            </div>
+            
+            <div class="circular-text-container">
+                <svg viewBox="0 0 200 200" class="circular-text-svg">
+                    <path id="circlePath" d="M 100, 100
+                        m -75, 0
+                        a 75,75 0 1,1 150,0
+                        a 75,75 0 1,1 -150,0
+                        " fill="none"/>
+                    <text>
+                        <textPath href="#circlePath" startOffset="50%" text-anchor="middle">
+                            ~ projek saya ~ projek saya ~
+                        </textPath>
+                    </text>
+                </svg>
+                <div class="arrow-down">↓</div>
+            </div>
         </div>
         
-        <div data-svg-wrapper>
-            <svg width="1596" height="513" viewBox="0 0 1596 513" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="imageFill" patternUnits="userSpaceOnUse" width="100%" height="100%">
-                        <image href="assets/preview.png" width="1596" height="513" preserveAspectRatio="xMidYMid slice"/>
-                    </pattern>
-                </defs>
-                <path fill="url(#imageFill)" fill-rule="evenodd" clip-rule="evenodd" d="M503 0.251953C512.389 0.251953 520 7.86311 520 17.252V128.252C520 137.641 512.389 145.252 503 145.252H188C178.611 145.252 171 152.863 171 162.252V337.252C171 346.641 163.389 354.252 154 354.252H17C7.61116 354.252 0 346.641 0 337.252V17.252C0 7.86312 7.61116 0.251953 17 0.251953H503ZM1180 0.251953C1187.18 0.251953 1193 6.07225 1193 13.252V138.252V144.252V499.252C1193 506.432 1187.18 512.252 1180 512.252H791C783.82 512.252 778 506.432 778 499.252V157.252C778 150.072 772.18 144.252 765 144.252H553C545.82 144.252 540 138.432 540 131.252V13.252C540 6.07225 545.82 0.251953 553 0.251953H1180ZM745 158.252C754.389 158.252 762 165.863 762 175.252V286.252C762 295.641 754.389 303.252 745 303.252H445C435.611 303.252 428 310.863 428 320.252V495.252C428 504.641 420.389 512.252 411 512.252H202C192.611 512.252 185 504.641 185 495.252V175.252C185 165.863 192.611 158.252 202 158.252H745ZM453 318.252C446.373 318.252 441 323.624 441 330.252V500.252C441 506.879 446.373 512.252 453 512.252H750C756.627 512.252 762 506.879 762 500.252V330.252C762 323.624 756.627 318.252 750 318.252H453ZM1220 0.251953C1212.27 0.251953 1206 6.51997 1206 14.252V279.252C1206 286.984 1212.27 293.252 1220 293.252H1582C1589.73 293.252 1596 286.984 1596 279.252V14.252C1596 6.51997 1589.73 0.251953 1582 0.251953H1220ZM1206 314.252C1206 310.386 1209.13 307.252 1213 307.252H1589C1592.87 307.252 1596 310.386 1596 314.252V505.252C1596 509.118 1592.87 512.252 1589 512.252H1213C1209.13 512.252 1206 509.118 1206 505.252V314.252ZM12 369.252C5.92487 369.252 1 374.177 1 380.252V501.252C1 507.327 5.92487 512.252 12 512.252H160C166.075 512.252 171 507.327 171 501.252V380.252C171 374.177 166.075 369.252 160 369.252H12Z"/>
-            </svg>
+        <div class="hero-image-container">
+            <img src="assets/heroimage.jpg" alt="Hero Image" class="hero-image">
         </div>
-        
-        
-        <div class="circular-text-container">
-            <svg viewBox="0 0 200 200" class="circular-text-svg">
-                <path id="circlePath" d="M 100, 100
-                    m -75, 0
-                    a 75,75 0 1,1 150,0
-                    a 75,75 0 1,1 -150,0
-                    " fill="none"/>
-                <text>
-                    <textPath href="#circlePath" startOffset="50%" text-anchor="middle">
-                        ~ projek saya ~ projek saya ~
-                    </textPath>
-                </text>
-            </svg>
-            <div class="arrow-down">↓</div>
-        </div>
+       
     </section>
 
     <section id="tentang">
@@ -72,14 +72,14 @@
                     <p>Email: fazadafiki@gmail.com</p>
                     <p>Nomor Telepon: +62 857-9430-5930</p>
                     <div class="social-icons">
-                        <a href="#"><i class="icon-facebook"></i></a>
-                        <a href="#"><i class="icon-instagram"></i></a>
-                        <a href="#"><i class="icon-twitter"></i></a>
+                        <span class="icon-container"><i class="fab fa-facebook-f"></i></span>
+                        <span class="icon-container"><i class="fab fa-instagram"></i></span>
+                        <span class="icon-container"><i class="fab fa-twitter"></i></span>
                     </div>
                 </div>
                 <div class="buttons">
-                    <button>Kolaborasi</button>
-                    <button>Download CV</button>
+                    <button class="btn primary">Kolaborasi</button>
+                    <button class="btn secondary">Download CV</button>
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
                     Saya seorang UI/UX designer yang berfokus pada menciptakan pengalaman pengguna yang fungsional dan intuitif untuk meningkatkan keterlibatan serta kemudahan penggunaan. Dengan pengalaman dalam berbagai industri, mulai dari bisnis kecil hingga perusahaan besar, saya selalu mengutamakan desain yang efektif dan menarik.
                 </p>
                 <div class="stats-container">
-                    <img src="assets/figma-icon.png" alt="Figma Icon">
+                    <img src="assets/figma.png" alt="Figma Icon">
                     <span>90%</span>
                     <div class="stats-bar">
                         <div class="stats-fill" style="width: 90%;"></div>
@@ -112,28 +112,28 @@
                     Saya seorang front-end developer yang mengkhususkan diri dalam menggunakan HTML5, Tailwind CSS, JavaScript, dan React. Fokus saya adalah menciptakan antarmuka yang responsif, cepat, dan menarik untuk meningkatkan pengalaman pengguna.
                 </p>
                 <div class="stats-container">
-                    <img src="assets/html-icon.png" alt="HTML Icon">
+                    <img src="assets/html5.webp" alt="HTML Icon">
                     <span>80%</span>
                     <div class="stats-bar">
                         <div class="stats-fill" style="width: 80%;"></div>
                     </div>
                 </div>
                 <div class="stats-container">
-                    <img src="assets/css-icon.png" alt="CSS Icon">
+                    <img src="assets/tailwind.png" alt="CSS Icon">
                     <span>80%</span>
                     <div class="stats-bar">
                         <div class="stats-fill" style="width: 80%;"></div>
                     </div>
                 </div>
                 <div class="stats-container">
-                    <img src="assets/js-icon.png" alt="JavaScript Icon">
+                    <img src="assets/javascript.png" alt="JavaScript Icon">
                     <span>80%</span>
                     <div class="stats-bar">
                         <div class="stats-fill" style="width: 80%;"></div>
                     </div>
                 </div>
                 <div class="stats-container">
-                    <img src="assets/react-icon.png" alt="React Icon">
+                    <img src="assets/react.webp" alt="React Icon">
                     <span>80%</span>
                     <div class="stats-bar">
                         <div class="stats-fill" style="width: 80%;"></div>
@@ -148,12 +148,12 @@
         <button class="lihat-detail">Lihat Detail →</button>
     </section>
     
-    <section id="portfolio">
+    <section id="portofolio">
         <h2>PROJEK YANG TELAH DIKERJAKAN</h2>
         <div class="portfolio-container">
             <div class="project-card">
                 <div class="project-image">
-                    <img src="assets/pixelgate.png" alt="PixelGate">
+                    <img src="assets/PixelGate.png" alt="PixelGate">
                 </div>
                 <h3>PixelGate</h3>
                 <p>September 2024</p>
@@ -162,7 +162,7 @@
     
             <div class="project-card">
                 <div class="project-image">
-                    <img src="assets/sehatera.png" alt="Sehatera">
+                    <img src="assets/Sehatera.png" alt="Sehatera">
                 </div>
                 <h3>Sehatera</h3>
                 <p>Maret 2025</p>
@@ -171,7 +171,7 @@
     
             <div class="project-card">
                 <div class="project-image">
-                    <img src="assets/kenziattire.png" alt="Kenzi Islamic Attire">
+                    <img src="assets/kenzi.png" alt="Kenzi Islamic Attire">
                 </div>
                 <h3>Kenzi Islamic Attire</h3>
                 <p>Oktober 2024</p>
@@ -191,10 +191,10 @@
                 <div class="testimoni-header">
                     <h4>Toto Kopyor</h4>
                     <p>Kawalu, Tasikmalaya</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <div class="client-social">
+                        <span class="client-icon"><i class="fab fa-facebook-f"></i></span>
+                        <span class="client-icon"><i class="fab fa-twitter"></i></span>
+                        <span class="client-icon"><i class="fab fa-linkedin-in"></i></span>
                     </div>
                 </div>
                 <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -205,10 +205,10 @@
                 <div class="testimoni-header">
                     <h4>Ujang Empedu</h4>
                     <p>Tasikmalaya</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <div class="client-social">
+                        <span class="client-icon"><i class="fab fa-facebook-f"></i></span>
+                        <span class="client-icon"><i class="fab fa-twitter"></i></span>
+                        <span class="client-icon"><i class="fab fa-linkedin-in"></i></span>
                     </div>
                 </div>
                 <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -219,10 +219,10 @@
                 <div class="testimoni-header">
                     <h4>Nanang Rante</h4>
                     <p>Mugarsari</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <div class="client-social">
+                        <span class="client-icon"><i class="fab fa-facebook-f"></i></span>
+                        <span class="client-icon"><i class="fab fa-twitter"></i></span>
+                        <span class="client-icon"><i class="fab fa-linkedin-in"></i></span>
                     </div>
                 </div>
                 <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -237,33 +237,37 @@
         <h2>KONTAK SAYA</h2>
     
         <div class="kontak-container">
+       
             <div class="kontak-info">
                 <h3>Mari diskusikan projekmu!</h3>
                 <p><i class="fas fa-envelope"></i> fazadafiki@gmail.com</p>
                 <p class="phone"><i class="fas fa-phone"></i> +62 857 9434 5930</p>
                 <p><i class="fas fa-map-marker-alt"></i> Kota Tasikmalaya</p>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
     
+         
             <div class="kontak-form">
                 <h3>Aku minat sama...</h3>
                 <div class="interest-buttons">
-                    <button class="selected">UI/UX Design</button>
-                    <button>Web Design</button>
-                    <button>Graphic Design</button>
-                    <button>Design System</button>
-                    <button>Lainnya</button>
+                    <button type="button" class="selected" data-value="UI/UX Design">UI/UX Design</button>
+                    <button type="button" data-value="Web Design">Web Design</button>
+                    <button type="button" data-value="Graphic Design">Graphic Design</button>
+                    <button type="button" data-value="Design System">Design System</button>
+                    <button type="button" data-value="Lainnya">Lainnya</button>
                 </div>
     
-                <form>
-                    <input type="text" placeholder="Nama Kamu" required>
-                    <input type="email" placeholder="Email Kamu" required>
-                    <textarea placeholder="Ketik Pesan" required></textarea>
-                    <button type="submit">
+                <form id="contactForm">
+                    <div id="formMessages"></div>
+                    <input type="text" name="name" placeholder="Nama Kamu" required>
+                    <input type="email" name="email" placeholder="Email Kamu" required>
+                    <input type="hidden" name="minat" id="minatInput" value="UI/UX Design">
+                    <textarea name="message" placeholder="Ketik Pesan" required></textarea>
+                    <button type="submit" id="submitButton">
                         <i class="fas fa-paper-plane"></i> Kirim Pesan
                     </button>
                 </form>
@@ -273,6 +277,7 @@
 
     <footer>
         <div class="footer-container">
+           
             <div class="footer-left">
                 <p>DESIGNER AND DEVELOPER AT ITS FINEST</p>
                 <h2>MARI BERKOLABORASI</h2>
@@ -280,13 +285,15 @@
                     <span>&#8599;</span>
                 </a>
             </div>
+    
+          
             <div class="footer-right">
                 <div class="footer-column">
                     <h4>BERANDA</h4>
                     <ul>
-                        <li><a href="#">TENTANG SAYA</a></li>
-                        <li><a href="#">PROJEK SAYA</a></li>
-                        <li><a href="#">TESTIMONI</a></li>
+                        <li><a href="#tentang">TENTANG SAYA</a></li>
+                        <li><a href="#portofolio">PROJEK SAYA</a></li>
+                        <li><a href="#testimoni">TESTIMONI</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -315,16 +322,192 @@
                 </div>
             </div>
         </div>
-        
+    
+      
         <div class="footer-bottom">
             <p><a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <p>© 2025 NothingCreated (Fiki Haryono). All rights reserved.</p>
         </div>
     </footer>
+
+
+    <style>
+        .interest-buttons button.hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        
+        .form-message {
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+        }
+        
+        .form-message.error {
+            background-color: #ffe6e6;
+            color: #d8000c;
+            border: 1px solid #ffcccc;
+        }
+        
+        .form-message.success {
+            background-color: #e6ffe6;
+            color: #006400;
+            border: 1px solid #ccffcc;
+        }
+       
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .kontak-form {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        #submitButton:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        #formMessages .success-message {
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+            color: #3c763d;
+            border-radius: 4px;
+        }
+
+        #formMessages .error-message {
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #f2dede;
+            border: 1px solid #ebccd1;
+            color: #a94442;
+            border-radius: 4px;
+        }
+    </style>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    
+    const interestButtons = document.querySelectorAll('.interest-buttons button');
+    const minatInput = document.getElementById('minatInput');
+    
+    interestButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            
+            interestButtons.forEach(btn => btn.classList.remove('selected'));
+            
+            this.classList.add('selected');
+           
+            minatInput.value = this.getAttribute('data-value');
+        });
+    });
+    
+    const contactForm = document.getElementById('contactForm');
+    const formMessages = document.getElementById('formMessages');
+    const submitButton = document.getElementById('submitButton');
+    
+    if (!contactForm) {
+        console.error("Contact form element not found!");
+        return;
+    }
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+       
+        formMessages.innerHTML = '';
+        
+    
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+        submitButton.disabled = true;
+        
+        const formData = new FormData(this);
+        
+     
+        console.log("Sending form data:");
+        for (let pair of formData.entries()) {
+            console.log(pair[0] + ': ' + pair[1]);
+        }
+        
+       
+        formMessages.innerHTML = '<div class="info-message">Sedang mengirim pesan...</div>';
+
+        const currentPath = window.location.pathname;
+        const pathParts = currentPath.split('/');
+        pathParts.pop(); 
+        const basePath = pathParts.join('/');
+        const phpUrl = `${basePath}/proses_kontak.php`;
+        
+        console.log("Submitting to:", phpUrl);
+        
+        fetch('proses_kontak.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            console.log("Response received:", response);
+            console.log("Response status:", response.status);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            
+            return response.text();
+        })
+        .then(text => {
+            console.log("Raw response text:", text);
+    
+            try {
+                const data = JSON.parse(text);
+                console.log("Parsed JSON data:", data);
+                return data;
+            } catch (e) {
+                console.error("Error parsing JSON:", e);
+                console.log("First 100 chars of response:", text.substring(0, 100));
+                
+                // If it contains HTML, it might be a server error page
+                if (text.includes('<!DOCTYPE html>') || text.includes('<html')) {
+                    throw new Error("Server returned HTML instead of JSON. Check server logs.");
+                }
+                
+                throw new Error("Invalid server response format");
+            }
+        })
+        .then(data => {
+            if (data.status === 'success') {
+                formMessages.innerHTML = `<div class="success-message">${data.message}</div>`;
+                contactForm.reset();
+                interestButtons.forEach(btn => btn.classList.remove('selected'));
+                interestButtons[0].classList.add('selected');
+                minatInput.value = interestButtons[0].getAttribute('data-value');
+            } else {
+                formMessages.innerHTML = `<div class="error-message">${data.message}</div>`;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            formMessages.innerHTML = `<div class="error-message">Terjadi kesalahan saat mengirim pesan: ${error.message}</div>`;
+        })
+        .finally(() => {
+            console.log("Finally block executed");
+            submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Kirim Pesan';
+            submitButton.disabled = false;
+        });
+    });
+});
+        </script>
 </body>
-</html>    
+</html>
