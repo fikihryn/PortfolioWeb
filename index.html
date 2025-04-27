@@ -237,7 +237,7 @@
         <h2>KONTAK SAYA</h2>
     
         <div class="kontak-container">
-       
+            <!-- Kontak Info -->
             <div class="kontak-info">
                 <h3>Mari diskusikan projekmu!</h3>
                 <p><i class="fas fa-envelope"></i> fazadafiki@gmail.com</p>
@@ -250,7 +250,7 @@
                 </div>
             </div>
     
-         
+            <!-- Form Kontak -->
             <div class="kontak-form">
                 <h3>Aku minat sama...</h3>
                 <div class="interest-buttons">
@@ -277,7 +277,7 @@
 
     <footer>
         <div class="footer-container">
-           
+            <!-- Left Section -->
             <div class="footer-left">
                 <p>DESIGNER AND DEVELOPER AT ITS FINEST</p>
                 <h2>MARI BERKOLABORASI</h2>
@@ -286,7 +286,7 @@
                 </a>
             </div>
     
-          
+            <!-- Right Section -->
             <div class="footer-right">
                 <div class="footer-column">
                     <h4>BERANDA</h4>
@@ -323,7 +323,7 @@
             </div>
         </div>
     
-      
+        <!-- Bottom Footer -->
         <div class="footer-bottom">
             <p><a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
             <div class="social-icons">
@@ -335,7 +335,7 @@
         </div>
     </footer>
 
-
+    <!-- Add CSS for hover effect on interest buttons -->
     <style>
         .interest-buttons button.hover {
             background-color: rgba(0, 0, 0, 0.05);
@@ -343,6 +343,7 @@
             transition: all 0.3s ease;
         }
         
+        /* Contact form message styling */
         .form-message {
             padding: 10px 15px;
             margin-bottom: 15px;
@@ -363,7 +364,8 @@
             color: #006400;
             border: 1px solid #ccffcc;
         }
-       
+        
+        /* Add animation to contact form */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -373,6 +375,7 @@
             animation: fadeIn 0.8s ease-out;
         }
         
+        /* Style for submit button when disabled */
         #submitButton:disabled {
             opacity: 0.7;
             cursor: not-allowed;
@@ -397,24 +400,25 @@
         }
     </style>
 
-
+    <!-- Add smooth scrolling for anchor links -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-    
+    // Handle interest selection
     const interestButtons = document.querySelectorAll('.interest-buttons button');
     const minatInput = document.getElementById('minatInput');
     
     interestButtons.forEach(button => {
         button.addEventListener('click', function() {
-            
+            // Remove selected class from all buttons
             interestButtons.forEach(btn => btn.classList.remove('selected'));
-            
+            // Add selected class to clicked button
             this.classList.add('selected');
-           
+            // Update hidden input value
             minatInput.value = this.getAttribute('data-value');
         });
     });
     
+    // Handle form submission
     const contactForm = document.getElementById('contactForm');
     const formMessages = document.getElementById('formMessages');
     const submitButton = document.getElementById('submitButton');
@@ -427,27 +431,28 @@
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-       
+        // Clear previous messages
         formMessages.innerHTML = '';
         
-    
+        // Show loading state
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
         submitButton.disabled = true;
         
         const formData = new FormData(this);
         
-     
+        // Log form data for debugging
         console.log("Sending form data:");
         for (let pair of formData.entries()) {
             console.log(pair[0] + ': ' + pair[1]);
         }
         
-       
+        // Add a temporary status message
         formMessages.innerHTML = '<div class="info-message">Sedang mengirim pesan...</div>';
-
+        
+        // Get the absolute URL of the PHP file
         const currentPath = window.location.pathname;
         const pathParts = currentPath.split('/');
-        pathParts.pop(); 
+        pathParts.pop(); // Remove current file name
         const basePath = pathParts.join('/');
         const phpUrl = `${basePath}/proses_kontak.php`;
         
@@ -461,6 +466,7 @@
             console.log("Response received:", response);
             console.log("Response status:", response.status);
             
+            // Check if response is ok (status in the range 200-299)
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
@@ -469,7 +475,8 @@
         })
         .then(text => {
             console.log("Raw response text:", text);
-    
+            
+            // Try to parse as JSON
             try {
                 const data = JSON.parse(text);
                 console.log("Parsed JSON data:", data);
@@ -490,6 +497,7 @@
             if (data.status === 'success') {
                 formMessages.innerHTML = `<div class="success-message">${data.message}</div>`;
                 contactForm.reset();
+                // Reset interest selection
                 interestButtons.forEach(btn => btn.classList.remove('selected'));
                 interestButtons[0].classList.add('selected');
                 minatInput.value = interestButtons[0].getAttribute('data-value');
@@ -502,6 +510,7 @@
             formMessages.innerHTML = `<div class="error-message">Terjadi kesalahan saat mengirim pesan: ${error.message}</div>`;
         })
         .finally(() => {
+            // Ensure button state is always reset
             console.log("Finally block executed");
             submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Kirim Pesan';
             submitButton.disabled = false;
@@ -509,5 +518,6 @@
     });
 });
         </script>
+        <script src="main.js"></script>
 </body>
 </html>
